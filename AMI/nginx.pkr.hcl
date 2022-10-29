@@ -20,7 +20,7 @@ source "amazon-ebs" "terraform-nginx-prj-19" {
       virtualization-type = "hvm"
     }
     most_recent = true
-    owners      = ["309956199498"]
+    owners      = ["372759426428"]
   }
   ssh_username = "ec2-user"
   tag {
