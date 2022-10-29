@@ -12,13 +12,13 @@ keyed_groups:
 
 filters:
   tag:Name:
-    - ACS-bastion
-    - ACS-nginx
-    - ACS-tooling
-    - ACS-wordpress
-    - ACS-sonarqube
-    - ACS-artifactory
-    - ACS-Jenkins
+    - mtrone-bastion
+    - mtrone-nginx
+    - mtrone-tooling
+    - mtrone-wordpress
+    - mtrone-sonarqube
+    - mtrone-artifactory
+    - mtrone-Jenkins
   instance-state-name : running
   
 hostnames:
