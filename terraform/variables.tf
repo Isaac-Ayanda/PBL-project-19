@@ -1,5 +1,5 @@
 variable "region" {
-  default = "eu-west-1"
+  default = "us-east-1"
 }
 
 variable "vpc_cidr" {
@@ -14,13 +14,13 @@ variable "enable_dns_hostnames" {
   default = "true"
 }
 
-variable "enable_classiclink" {
-  default = "false"
-}
+# variable "enable_classiclink" {
+#   default = "false"
+# }
 
-variable "enable_classiclink_dns_support" {
-  default = "false"
-}
+# variable "enable_classiclink_dns_support" {
+#   default = "false"
+# }
 
 variable "preferred_number_of_public_subnets" {
   type        = number

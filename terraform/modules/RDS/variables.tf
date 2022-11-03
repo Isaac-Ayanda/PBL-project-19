@@ -17,7 +17,7 @@ variable "db-sg" {
 
 variable "private_subnets" {
   type        = list
-  description = "Private subnets fro DB subnets group"
+  description = "Private subnets for DB subnets group"
 }
 
 

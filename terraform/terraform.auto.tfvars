@@ -6,9 +6,9 @@ enable_dns_support = "true"
 
 enable_dns_hostnames = "true"
 
-enable_classiclink = "false"
+# enable_classiclink = "false"
 
-enable_classiclink_dns_support = "false"
+# enable_classiclink_dns_support = "false"
 
 preferred_number_of_public_subnets = 2
 
@@ -16,13 +16,13 @@ preferred_number_of_private_subnets = 4
 
 environment = "dev"
 
-ami-web = "ami-00a45107f7c3455a5"
+ami-web = "ami-032bf6330a9bdedc4"
 
-ami-bastion = "ami-0dbc99375eba56ff4"
+ami-bastion = "ami-0362f1da91f07e16a"
 
-ami-nginx = "ami-010bd88cc8f5997f3"
+ami-nginx = "ami-09e966f61177af8c7"
 
-ami-sonar = "ami-0f8bd95a744e074b8"
+ami-sonar = "ami-0e02202d39766448e"
 
 keypair = "Isaac"
 
@@ -30,7 +30,7 @@ master-password = "devopspblproject"
 
 master-username = "isaac"
 
-account_no = "372759426428"
+account_no = "372759426427"
 
 tags = {
   Owner-Email     = "izikayanda@gmail.com"

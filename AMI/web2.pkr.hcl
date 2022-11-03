@@ -3,14 +3,7 @@ variable "region" {
   default = "us-east-1"
 }
 
-variable "ami_id" {
-    type = string
-    default = "ami-06640050dc3f556bb" 
-}
-locals {
-  timestamp = regex_replace(timestamp(), "[- TZ:]", "")
-  app_name = "terraform-web-prj-19"
-}
+locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
 
 # source blocks are generated from your builders; a source can be referenced in
@@ -20,13 +13,22 @@ source "amazon-ebs" "terraform-web-prj-19" {
   ami_name      = "terraform-web-prj-19-${local.timestamp}"
   instance_type = "t2.micro"
   region        = var.region
-  source_ami    = "${var.ami_id}"  
+  source_ami_filter {
+    filters = {
+      name                = "RHEL-8.2_HVM-20200803-x86_64-0-Hourly2-GP2"
+      root-device-type    = "ebs"
+      virtualization-type = "hvm"
+    }
+    most_recent = true
+    owners      = ["372759426427"]
+  }
   ssh_username = "ec2-user"
   tag {
     key   = "Name"
     value = "terraform-web-prj-19"
   }
 }
+
 
 # a build block invokes sources and runs provisioning steps on them.
 build {
